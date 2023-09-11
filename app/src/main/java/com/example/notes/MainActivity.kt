@@ -32,8 +32,8 @@ import com.example.notes.databinding.ActivityMainBinding
     private lateinit var viewModel: NoteViewModel
     private lateinit var adapter: NotesAdapter
     lateinit var selectedNote:Note
-    private lateinit var modeswitch:SwitchCompat
-    private var nightmode:Boolean=false
+    // private lateinit var modeswitch:SwitchCompat
+    // private var nightmode:Boolean=false
      private var editor:SharedPreferences.Editor?=null
      private var sharedPreferences:SharedPreferences?=null
 
@@ -62,21 +62,21 @@ import com.example.notes.databinding.ActivityMainBinding
         database= NoteDatabase.getDatabase(this)
 
 
-        sharedPreferences=getSharedPreferences("MODE", Context.MODE_PRIVATE)
-        nightmode=sharedPreferences?.getBoolean("night",false)!!
+        // sharedPreferences=getSharedPreferences("MODE", Context.MODE_PRIVATE)
+        // nightmode=sharedPreferences?.getBoolean("night",false)!!
 
-        if(nightmode){
-            modeswitch.isChecked=true
+        // if(nightmode){
+        //     modeswitch.isChecked=true
 
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-        }
-        modeswitch.setOnCheckedChangeListener{compoundButton,state->
+        //     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        // }
+        // modeswitch.setOnCheckedChangeListener{compoundButton,state->
 
-            if(nightmode){
+        //     if(nightmode){
                 
-            }
+        //     }
 
-        }
+        // }
 
     }
 
